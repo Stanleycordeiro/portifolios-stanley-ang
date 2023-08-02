@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Profile } from '../models/profile';
+import { HttpClient } from '@angular/common/http';
+
+
 
 
 @Injectable({
@@ -9,19 +10,18 @@ import { Profile } from '../models/profile';
 export class ProfileService {
   private url = 'https://api.github.com/users/Stanleycordeiro';
 
-  profile = new Object();
 
-  constructor(private httpClient: HttpClient) {  }
+
+  constructor(public httpClient: HttpClient) { }
 
 
 
   getUser() {
-    return this.httpClient.get(this.url).subscribe(data => {
-      this.profile = data;
-      console.log(this.profile);
-    })
+    return this.httpClient.get(this.url);
   }
 
-  
+  getAllRepos() {
+    return this.httpClient.get(`${this.url}/repos`);
+  }
 
 }
