@@ -13,11 +13,11 @@ export class AppComponent {
   title = 'portifolio-stanley';
 
   profile: any = [];
-  repos: any = [{}];
+  
 
   constructor(private profileService: ProfileService) {
     this.getUser();
-    this.getAllRepos();
+    
   }
 
 
@@ -29,13 +29,7 @@ export class AppComponent {
     });
   };
 
-  getAllRepos(){
-    this.profileService.getAllRepos().subscribe(data => {
-      this.repos = data;
-      console.log(this.repos)
-    });
-  };
-
+ 
 
  
 

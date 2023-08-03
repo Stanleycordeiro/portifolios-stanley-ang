@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileService } from './services/profile.service';
+import { ReposComponent } from './components/repos/repos.component';
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
+    ReposComponent,    
   ],
   imports: [
     BrowserModule,
