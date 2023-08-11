@@ -1,6 +1,6 @@
 
 import { ProfileService } from './services/profile.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 
 
@@ -21,6 +21,19 @@ export class AppComponent {
   }
 
 
+  screenOnRepos = true;
+  screenOnProfile = false;
+
+  toogleScreenRepos() {
+    this.screenOnRepos = true;
+    this.screenOnProfile = false;
+  }
+  
+  toogleScreenProfile() {
+    this.screenOnProfile = true;
+    this.screenOnRepos = false;
+  }
+  
 
   getUser() {
     this.profileService.getUser().subscribe(data => {
@@ -28,10 +41,8 @@ export class AppComponent {
       console.log(this.profile)
     });
   };
-
  
 
- 
 
 
 }

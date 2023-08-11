@@ -8,6 +8,9 @@ import { ProfileService } from 'src/app/services/profile.service';
 })
 export class ReposComponent {
 
+
+
+
   repos: any = [{}];
 
   constructor(private profileService: ProfileService) {
@@ -23,3 +26,4 @@ export class ReposComponent {
 
 
 }
+

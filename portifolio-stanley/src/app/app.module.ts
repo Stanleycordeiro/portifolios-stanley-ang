@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileService } from './services/profile.service';
 import { ReposComponent } from './components/repos/repos.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReposComponent,    
+    ReposComponent,
+    ProfileComponent,    
   ],
   imports: [
     BrowserModule,
